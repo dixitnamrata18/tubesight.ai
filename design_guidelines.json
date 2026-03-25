@@ -1,0 +1,149 @@
+{
+  "project_name": "TubeSight AI",
+  "theme_strategy": "dark_only",
+  "emotional_archetype": "Electric & Neon",
+  "design_principles": [
+    "Fusion over Imitation: Mix Cyberpunk aesthetics with Swiss Grid precision.",
+    "Emotion First: The search must feel 'intelligent' and 'alive', not static.",
+    "Content is King: AI Insights are the hero; videos are the supporting evidence.",
+    "Negative Space: Use deep black voids to make neon data pop.",
+    "Contrast: High contrast text for readability against dark backgrounds."
+  ],
+  "typography": {
+    "headings": {
+      "family": "Outfit, sans-serif",
+      "weights": ["400", "700"],
+      "tracking": "-0.02em",
+      "usage": "All section titles, hero text, and major KPIs."
+    },
+    "body": {
+      "family": "DM Sans, sans-serif",
+      "weights": ["400", "500"],
+      "usage": "Paragraphs, card descriptions, and UI labels."
+    },
+    "mono": {
+      "family": "JetBrains Mono, monospace",
+      "usage": "Code snippets, data values, and technical labels."
+    }
+  },
+  "colors": {
+    "background": {
+      "default": "#050505",
+      "paper": "#0A0A0A",
+      "subtle": "#121212"
+    },
+    "primary": {
+      "main": "#06b6d4",
+      "glow": "0 0 20px rgba(6, 182, 212, 0.5)"
+    },
+    "secondary": {
+      "main": "#8b5cf6",
+      "glow": "0 0 20px rgba(139, 92, 246, 0.5)"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#A1A1AA",
+      "muted": "#52525B"
+    },
+    "accent": {
+      "cyan": "#22d3ee",
+      "purple": "#c084fc",
+      "error": "#ef4444",
+      "success": "#10b981"
+    }
+  },
+  "layout_strategy": {
+    "global": "Mobile-first, fluid containers with max-width restraints for readability.",
+    "search_page": {
+      "style": "Centered 'Hero' Layout",
+      "structure": "Vertical stack: Logo -> Large Input -> Suggested Queries -> Footer",
+      "alignment": "Center aligned vertically and horizontally"
+    },
+    "results_page": {
+      "style": "Bento Grid (Mode B)",
+      "grid_cols": "grid-cols-1 md:grid-cols-12",
+      "gap": "gap-4 md:gap-6",
+      "areas": {
+        "insight_hero": "col-span-full md:col-span-8 row-span-2 (The AI Answer)",
+        "stats_panel": "col-span-full md:col-span-4 row-span-2 (Key Metrics)",
+        "video_grid": "col-span-full (Grid of video cards)"
+      }
+    },
+    "spacing": {
+      "container_padding": "p-4 md:p-8 lg:p-12",
+      "section_gap": "gap-12 md:gap-24",
+      "internal_padding": "p-6"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-primary text-black font-bold rounded-full hover:shadow-[0_0_20px_rgba(6,182,212,0.6)] transition-all duration-300",
+      "secondary": "border border-white/10 bg-white/5 text-white rounded-full hover:bg-white/10 transition-all",
+      "ghost": "text-zinc-400 hover:text-white transition-colors"
+    },
+    "cards": {
+      "style": "Glassmorphism Lite",
+      "classes": "bg-[#0A0A0A]/80 backdrop-blur-md border border-white/10 rounded-xl shadow-xl",
+      "hover": "hover:border-primary/50 transition-colors duration-300"
+    },
+    "input": {
+      "search_bar": "bg-black/50 border border-white/20 text-white text-lg placeholder:text-zinc-600 rounded-2xl focus:border-primary focus:ring-1 focus:ring-primary transition-all shadow-[0_0_40px_-10px_rgba(0,0,0,0.5)]"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": "backdrop-blur-xl bg-black/40 border border-white/10",
+    "neon_glow": "drop-shadow-[0_0_10px_rgba(6,182,212,0.5)]",
+    "gradient_text": "bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500",
+    "mesh_gradient": "Radial gradient background for Hero section to create depth."
+  },
+  "motion": {
+    "library": "framer-motion",
+    "preferences": {
+      "reduced_motion": "respect-user-settings",
+      "transition_defaults": "type: 'spring', stiffness: 300, damping: 30"
+    },
+    "required_animations": [
+      "Staggered entrance for search results",
+      "Typing effect for AI insights",
+      "Hover lift for video cards",
+      "Glow pulse for search button"
+    ]
+  },
+  "assets": {
+    "images": [
+      {
+        "category": "hero_background",
+        "url": "https://images.unsplash.com/photo-1759735541630-036eefb7cd3a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NjZ8MHwxfHNlYXJjaHw0fHxhYnN0cmFjdCUyMGRhcmslMjB0ZWNobm9sb2d5JTIwYmFja2dyb3VuZCUyMG5lb258ZW58MHx8fHwxNzczMzEwODc3fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract blue and purple light streaks for subtle background overlay"
+      }
+    ],
+    "icons": "lucide-react"
+  },
+  "instructions_to_main_agent": [
+    "INSTALL: yarn add framer-motion clsx tailwind-merge",
+    "SETUP: Ensure 'Outfit' and 'DM Sans' are imported in index.css (via Google Fonts).",
+    "THEME: Force dark mode in tailwind.config.js or simply build dark-first.",
+    "CRITICAL: Do not use default Shadcn cards. Customize them to match the 'Glassmorphism Lite' style defined above.",
+    "CRITICAL: The search input must be the centerpiece. Make it large (h-16) and glowing.",
+    "LAYOUT: Use the Bento Grid strategy for the results page. The AI Insight is the 'Hero' cell.",
+    "ACCESSIBILITY: Ensure text contrast is at least 4.5:1 against the dark background. Use Zinc-400 for secondary text, not darker."
+  ],
+  "universal_guidelines": [
+    "You tend to converge toward generic, 'on distribution' outputs. In frontend design, this creates what users call the 'AI slop' aesthetic. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy",
+    "Use glass-morphism effects with backdrop filters (12-24px blur)",
+    "You MUST NOT apply universal transition. Eg: transition: all. This results in breaking transforms. Always add transitions for specific interactive elements like button, input excluding transforms",
+    "You MUST NOT center align the app container, ie do not add .App { text-align: center; } in the css file. This disrupts the human natural reading flow of text",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯📚🎭🎬🎪🎉🎊🎁🎀🎂🍰🎈🎨🎰💰💵💳🏦💎🪙💸🤑📊📈📉💹🔢🏆🥇 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Main agent relies on these image URLs. Missing categories (especially sponsor logos) = main agent will use placeholder text which is FORBIDDEN",
+    "Components MUST use named exports (export const ComponentName = ...)",
+    "Pages MUST use default exports (export default function PageName() {...})",
+    "Use sonner for toasts"
+  ]
+}
